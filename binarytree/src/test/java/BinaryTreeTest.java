@@ -40,5 +40,20 @@ public class BinaryTreeTest {
         Assert.assertFalse(binaryTree.isBinaryTreeFull());
     }
 
+    @Test
+    public void shouldProcessTheNodesInOrder(){
+
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+        binaryTree.add(1);
+        binaryTree.add(2);
+        binaryTree.add(3);
+        binaryTree.add(4);
+        binaryTree.add(5);
+        List<Integer> expected = Arrays.asList(4,2,5,1,3);
+
+        List<TreeNode<Integer>> result = binaryTree.inOrderNonRec();
+
+        Assert.assertEquals(expected,result.stream().map(TreeNode::getData).collect(Collectors.toList()));
+    }
 
 }

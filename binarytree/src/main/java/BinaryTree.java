@@ -139,14 +139,14 @@ public class BinaryTree<T> {
      * the left subtree is processed first then the root and then the right subtree
      * @return
      */
-    public List<TreeNode> inOrderNonRec(){
+    public List<TreeNode<T>> inOrderNonRec(){
 
-        List<TreeNode> inOrderSeq = new ArrayList<>();
+        List<TreeNode<T>> inOrderSeq = new ArrayList<>();
         if (root == null) {
             return inOrderSeq;
         }
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode tempNode = root;
+        Stack<TreeNode<T>> stack = new Stack<>();
+        TreeNode<T> tempNode = root;
         while(true){
 
             while(tempNode!=null){
