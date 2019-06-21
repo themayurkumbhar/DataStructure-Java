@@ -165,7 +165,7 @@ public class BinaryTree<T> {
     }
 
     /**
-     * solution using one stack and one queue
+     * The nodes of the tree will be processed in a spiral fashion.
      * @return
      */
     public List<TreeNode<T>> spiralForm(){
@@ -205,6 +205,10 @@ public class BinaryTree<T> {
         return spiral;
     }
 
+    /**
+     * pre order processing of the nodes that is the root-left-right style of processing.
+     * @return
+     */
     public List<TreeNode<T>> preOrderNonRecursive(){
 
         List<TreeNode<T>> preOrder = new ArrayList<>();

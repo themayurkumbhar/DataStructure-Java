@@ -56,4 +56,23 @@ public class BinaryTreeTest {
         Assert.assertEquals(expected,result.stream().map(TreeNode::getData).collect(Collectors.toList()));
     }
 
+
+    @Test
+    public void shouldProcessNodeInSpiralOrder(){
+
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
+        binaryTree.add(1);
+        binaryTree.add(2);
+        binaryTree.add(3);
+        binaryTree.add(4);
+        binaryTree.add(5);
+        binaryTree.add(6);
+        List<Integer> expected = Arrays.asList(1,2,3,6,5,4);
+
+        List<TreeNode<Integer>> result = binaryTree.spiralForm();
+
+        Assert.assertEquals(expected,result.stream().map(TreeNode::getData).collect(Collectors.toList()));
+
+    }
+
 }
